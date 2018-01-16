@@ -40,7 +40,7 @@ const readExercises = (ch, sections = ['exercise', 'solution', 'validation']) =>
   const folder = path.join(__dirname, ch);
 
   const partition = reduce((pts, f) => {
-    forEach((section) => {
+    forEach(section => {
       const re = filenameRe(section);
 
       if (re.test(f)) {
