@@ -11,7 +11,7 @@ assert(
   'The function has an invalid type; hint: `getJsons` must return a `Task`!',
 );
 
-res.fork(throwUnexpected, ($res) => {
+res.fork(throwUnexpected, $res => {
   assert(
     $res.$value['/'] === 'json for /' && $res.$value['/about'] === 'json for /about',
     'The function gives incorrect results; hint: did you correctly map `httpGet` over the Map\'s values?',

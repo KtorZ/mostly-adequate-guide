@@ -91,7 +91,7 @@ const typeMismatch = (src, got, fn) => `Type Mismatch in function '${fn}'
 const capitalize = s => `${s[0].toUpperCase()}${s.substring(1)}`;
 
 
-const ordinal = (i) => {
+const ordinal = i => {
   switch (i) {
     case 1:
       return '1st';
@@ -104,7 +104,7 @@ const ordinal = (i) => {
   }
 };
 
-const getType = (x) => {
+const getType = x => {
   if (x === null) {
     return 'Null';
   }

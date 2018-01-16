@@ -11,7 +11,7 @@ assert(
   'The function has an invalid type; hint: `readFirst` must return a `Task`!',
 );
 
-res.fork(throwUnexpected, ($res) => {
+res.fork(throwUnexpected, $res => {
   assert(
     $res instanceof Maybe,
     'The function has an invalid type; hint: `readFirst` must return a `Task Error (Maybe String)`!',

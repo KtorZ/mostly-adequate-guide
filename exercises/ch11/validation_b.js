@@ -11,7 +11,7 @@ assert(
   'The function has an incorrect type; hint: `findNameById` must return a `Task String User`!',
 );
 
-res.fork(throwUnexpected, (val) => {
+res.fork(throwUnexpected, val => {
   assert(
     !(val instanceof Task),
     'The function has an incorrect type; hint: `findNameById` must return a `Task String User`, make sure to flatten any nested Functor!',
@@ -36,7 +36,7 @@ assert(
   'The function has an incorrect type; hint: `findNameById` must return a `Task String User`!',
 );
 
-rej.fork((val) => {
+rej.fork(val => {
   assert(
     !(val instanceof Task),
     'The function has an incorrect type; hint: `findNameById` must return a `Task String User`, make sure to flatten any nested Functor!',
